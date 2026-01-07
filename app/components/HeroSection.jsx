@@ -1,44 +1,41 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
 
 function HeroSection() {
+  const [active, setActive] = useState(0);
   const categories = [
     {
       title: "Automobile",
-      active: true,
     },
     {
       title: "Clothes and wear",
-      active: false,
     },
     {
       title: "Home interior",
-      active: false,
     },
     {
       title: "Computer and tech",
-      active: false,
     },
     {
       title: "Tools and equiment",
-      active: false,
     },
     {
       title: "Sports and outdoor",
-      active: false,
     },
     {
       title: "Animal and pets",
-      active: false,
     },
     {
       title: "Machinery tools",
-      active: false,
     },
     {
       title: "More Categories",
-      active: false,
     },
   ];
+  function handleActive(index) {
+    setActive(index);
+  }
   return (
     <section className="mt-6">
       <div className="max-w-10/12 mx-auto bg-white rounded-md px-1 py-6 ring ring-stone-200">
@@ -47,9 +44,10 @@ function HeroSection() {
             {categories.map((currValue, index) => {
               return (
                 <p
+                  onClick={() => handleActive(index)}
                   key={index}
-                  className={`text-[16px] px-2 py-2 rounded-md ${
-                    currValue.active ? "bg-blue-100" : ""
+                  className={`text-[16px] px-2 py-2 rounded-md cursor-pointer ${
+                    active == index ? "bg-blue-100" : ""
                   }`}
                 >
                   {currValue.title}
@@ -57,7 +55,7 @@ function HeroSection() {
               );
             })}
           </div>
-          <div className="bg-amber-400 flex justify-center items-center">
+          <div className="relative flex justify-center items-center">
             <Image
               src={"/Image/backgrounds/hero-section-banner.png"}
               sizes="full"
@@ -66,13 +64,22 @@ function HeroSection() {
               className="h-95 w-full object-cover"
               alt="background"
             />
+            <div className="absolute top-10 left-10 ">
+              <p className="text-3xl mb-5">
+                Learn trending <br />
+                <span className="font-bold">Electronic items</span>
+              </p>
+              <button className="bg-white px-4 py-2 text-xl rounded-md">
+                Learn more
+              </button>
+            </div>
           </div>
-          <div className="flex flex-col justify-between px-4">
+          <div className="flex flex-col justify-between px-4 leading-snug">
             <div className="bg-blue-100 px-4 py-4 rounded-md flex flex-col gap-2">
               <div>
                 <p>
                   Hi, user <br />
-                  let's get started
+                  let&apos;s get started
                 </p>
               </div>
               <button className="bg-blue-500 px-4 py-1 w-full rounded-md text-white">
