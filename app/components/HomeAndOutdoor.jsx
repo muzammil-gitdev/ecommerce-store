@@ -62,8 +62,8 @@ function HomeAndOutdoor() {
                 Home and <br />
                 outdoor
               </h2>
-              <button className="bg-white rounded-md px-6 py-2">
-                Learn More
+              <button className="bg-white rounded-md px-6 py-2 font-semibold">
+                Source now
               </button>
             </div>
           </div>

@@ -12,11 +12,10 @@ export default function Navbar() {
         <div className=" w-10/12 mx-auto flex justify-between items-center grid-[1fr 3fr 2fr]">
           <div>
             <Image
-              className="w-fit h-13"
-              sizes="full"
+              // className="w-fit h-13"
               src={"/Layout/Brand/logo-colored.png"}
-              width={0}
-              height={0}
+              width={180}
+              height={150}
               alt="hello"
             />
           </div>
