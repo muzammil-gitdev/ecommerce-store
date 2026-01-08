@@ -26,7 +26,7 @@ export default function Navbar() {
               type="text"
               placeholder="Search"
             />
-            <div className="flex items-center px-1 border-l border-stone-300 ">
+            <div className="flex items-center px-1 border-l border-stone-300">
               <select className="pr-2">
                 <option>All Categories</option>
                 <option>Product 1</option>
@@ -34,7 +34,7 @@ export default function Navbar() {
                 <option>Product 3</option>
               </select>
             </div>
-            <button className="flex flex-2 justify-center items-center cursor-pointer bg-blue-600 text-white font-medium px-4">
+            <button className="flex flex-2 justify-center items-center cursor-pointer bg-blue-600  text-white font-medium px-4">
               Search
             </button>
           </div>
