@@ -81,7 +81,7 @@ function DealsAndOffer() {
               return (
                 <div
                   key={index}
-                  className="flex w-full flex-col justify-center items-center gap-2 border-l border-l-stone-300"
+                  className="flex w-full flex-col justify-center items-center gap-2 border-l border-l-stone-300 group"
                 >
                   <Image
                     src={currValue.imgSrc}
@@ -89,7 +89,7 @@ function DealsAndOffer() {
                     width={100}
                     height={100}
                     alt="headphone"
-                    className="hover:scale-110 transition-all"
+                    className=" transition-all group-hover:scale-110 group-active:scale-95"
                   />
                   <p>{currValue.title}</p>
                   <p className="rounded-2xl bg-red-100 px-2 text-red-500 font-semibold">

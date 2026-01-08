@@ -84,7 +84,7 @@ function HomeAndOutdoor() {
                     height={100}
                     width={100}
                     sizes="full"
-                    className="absolute bottom-2 right-3 group-hover:scale-120 transition-all"
+                    className="absolute bottom-2 right-3 group-hover:scale-120 transition-all group-active:scale-95"
                     alt="image"
                   />
                 </div>
