@@ -7,6 +7,7 @@ import CtaSection from "./components/CtaSection";
 import RecommendedItems from "./components/RecommendedItems";
 import OurExtraServices from "./components/OurExtraServices";
 import SupplierByReigons from "./components/SupplierByReigons";
+import NewsLetter from "./components/NewsLetter";
 export default function Home() {
   return (
     <div>
@@ -19,6 +20,7 @@ export default function Home() {
       <RecommendedItems />
       <OurExtraServices />
       <SupplierByReigons />
+      <NewsLetter />
     </div>
   );
 }

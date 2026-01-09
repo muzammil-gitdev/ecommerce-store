@@ -7,7 +7,7 @@ import { IoMenu } from "react-icons/io5";
 
 export default function Navbar() {
   return (
-    <div className="bg-white">
+    <header className="bg-white">
       <nav className="h-24 flex items-center border-b-2 border-stone-100">
         <div className=" w-10/12 mx-auto flex justify-between items-center grid-[1fr 3fr 2fr]">
           <div>
@@ -84,6 +84,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 }
