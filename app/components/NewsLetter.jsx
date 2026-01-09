@@ -1,6 +1,6 @@
 function NewsLetter() {
   return (
-    <section className="bg-slate-100 mt-10 py-10 mb-100">
+    <section className="bg-slate-100 mt-10 py-10">
       <div className="flex flex-col justify-center items-center gap-6">
         <div className="text-center">
           <h3 className="text-2xl font-semibold">
