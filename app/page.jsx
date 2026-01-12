@@ -11,7 +11,7 @@ import NewsLetter from "./components/NewsLetter";
 import Footer from "./components/Footer";
 export default function Home() {
   return (
-    <div>
+    <>
       <Navbar />
       <HeroSection />
       <DealsAndOffer />
@@ -23,6 +23,6 @@ export default function Home() {
       <SupplierByReigons />
       <NewsLetter />
       <Footer />
-    </div>
+    </>
   );
 }

@@ -4,6 +4,7 @@ import { MdMessage } from "react-icons/md";
 import { FaHeart } from "react-icons/fa";
 import { IoMdCart } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -33,9 +34,12 @@ export default function Navbar() {
                 <option>Product 3</option>
               </select>
             </div>
-            <button className="flex flex-2 justify-center items-center cursor-pointer bg-blue-600  text-white font-medium px-4">
+            <Link
+              href="/productlisting"
+              className="flex flex-2 justify-center items-center cursor-pointer bg-blue-600  text-white font-medium px-4"
+            >
               Search
-            </button>
+            </Link>
           </div>
           <div className="flex gap-6 text-stone-400 text-sm">
             <div className="flex flex-col justify-center items-center gap-1 cursor-pointer">
@@ -57,7 +61,7 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-      <div className="w-full shadow-md">
+      <div className="w-full border-b border-b-neutral-200">
         <div className="flex justify-between max-w-10/12 mx-auto py-4">
           <div className="flex gap-6">
             <div className="flex gap-1">
