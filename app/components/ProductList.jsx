@@ -1,6 +1,9 @@
 "use client";
 import { useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
+import PriceRange from "./PriceRange";
+import { IoGrid } from "react-icons/io5";
+import { FaList } from "react-icons/fa6";
 
 function ProductList() {
   const [isCategory, setIsCategory] = useState(true);
@@ -25,9 +28,18 @@ function ProductList() {
     console.log(isCategory);
   }
 
+  const [gridStyle, setGridStyle] = useState("grid");
+
+  function gridToList() {
+    setGridStyle("list");
+  }
+  function listToGrid() {
+    setGridStyle("grid");
+  }
+
   return (
     <section className="max-w-10/12 mx-auto">
-      <div className="grid grid-cols-[18%_82%] grid-rows-[10%_90%] gap-x-6">
+      <div className="grid grid-cols-[18%_82%] grid-rows-[6%_1fr] gap-x-6">
         <div className="row-span-2 ">
           <div className="flex flex-col gap-5">
             <div>
@@ -93,6 +105,17 @@ function ProductList() {
             <div>
               <div className="flex justify-between items-center border-t border-t-stone-200 py-3">
                 <p className="font-semibold text-lg text-neutral-800">
+                  Price Range
+                </p>
+                <IoIosArrowUp />
+              </div>
+              <div className="flex flex-col gap-2 mt-2 ">
+                <PriceRange />
+              </div>
+            </div>
+            <div>
+              <div className="flex justify-between items-center border-t border-t-stone-200 py-3">
+                <p className="font-semibold text-lg text-neutral-800">
                   Condition
                 </p>
                 <IoIosArrowUp />
@@ -111,8 +134,46 @@ function ProductList() {
             </div>
           </div>
         </div>
-        <div className="bg-blue-100">This is the search result analytics</div>
-        <div className="bg-red-200">This is product List</div>
+        <div className="flex items-center justify-between px-5 bg-white border border-stone-200 rounded-md text-lg">
+          <p>
+            12,911 items found in{" "}
+            <span className="font-semibold">Mobile Accessories</span>
+          </p>
+          <div className="flex items-center gap-4">
+            <div className="space-x-4">
+              <input type="checkbox" name="checkbox_verified" id="" />
+              <label htmlFor="checkbox_verified">Verified Only</label>
+            </div>
+            <div className=" flex items-center border rounded-md border-stone-200 h-full py-4 pr-4 outline-none">
+              <select className="px-4" name="" id="">
+                <option value="">Featured</option>
+              </select>
+            </div>
+            <div className="flex">
+              <div
+                onClick={listToGrid}
+                className={`border border-stone-200 p-4 rounded-l-md transition-all ${
+                  gridStyle == "grid"
+                    ? "bg-neutral-200 shadow-inner shadow-neutral-700"
+                    : null
+                }`}
+              >
+                <IoGrid />
+              </div>
+              <div
+                onClick={gridToList}
+                className={`border border-stone-200 p-4 rounded-r-md transition-all ${
+                  gridStyle == "list"
+                    ? "bg-neutral-200 shadow-inner shadow-neutral-700"
+                    : null
+                }`}
+              >
+                <FaList />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-red-200 mt-6">Here Will be the cards</div>
       </div>
     </section>
   );
