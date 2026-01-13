@@ -38,9 +38,68 @@ function ProductList() {
     setGridStyle("grid");
   }
 
+  const productsList = [
+    {
+      title: "Apple Iphone 12, RED, 256 GB",
+      price: 998,
+      rating: 7.5,
+      orders: 154,
+      imgSrc: "/Image/tech/image 33.png",
+      discount: true,
+    },
+    {
+      title: "Xiaomi Tab 7, 8GB, Metallic",
+      price: 998,
+      rating: 7.5,
+      orders: 154,
+      imgSrc: "/Image/tech/image 32.png",
+      discount: false,
+    },
+    {
+      title: "Macbook 16 Inch, 500GB SSD",
+      price: 998,
+      rating: 7.5,
+      orders: 154,
+      imgSrc: "/Image/tech/image 34.png",
+      discount: true,
+    },
+    {
+      title: "Electric Kettle, Black",
+      price: 998,
+      rating: 7.5,
+      orders: 154,
+      imgSrc: "/Image/tech/image 85.png",
+      discount: true,
+    },
+    {
+      title: "Baseus headphone, Wireless, White",
+      price: 998,
+      rating: 7.5,
+      orders: 154,
+      imgSrc: "/Image/tech/image 86.png",
+      discount: false,
+    },
+    {
+      title: "Canon Camera 500D",
+      price: 998,
+      rating: 7.5,
+      orders: 154,
+      imgSrc: "/Image/tech/6.png",
+      discount: false,
+    },
+    {
+      title: "Apple Watch 6, Retina Display, Calling Option",
+      price: 998,
+      rating: 7.5,
+      orders: 154,
+      imgSrc: "/Image/tech/8.png",
+      discount: false,
+    },
+  ];
+
   return (
     <section className="max-w-10/12 mx-auto">
-      <div className="grid grid-cols-[18%_82%] grid-rows-[6%_1fr] gap-x-6">
+      <div className="grid grid-cols-[18%_82%] grid-rows-[4.5%_1fr] gap-x-6">
         <div className="row-span-2 ">
           <div className="flex flex-col gap-5">
             <div>
@@ -174,8 +233,10 @@ function ProductList() {
             </div>
           </div>
         </div>
-        <div className="py-5 border-stone-200 rounded-md">
-          <ProductCard />
+        <div className="py-5 border-stone-200 rounded-md space-y-4">
+          {productsList.map((currValue, index) => {
+            return <ProductCard objectValue={currValue} key={index} />;
+          })}
         </div>
       </div>
     </section>
