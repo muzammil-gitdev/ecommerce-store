@@ -4,6 +4,7 @@ import { IoIosArrowUp } from "react-icons/io";
 import PriceRange from "./PriceRange";
 import { IoGrid } from "react-icons/io5";
 import { FaList } from "react-icons/fa6";
+import ProductCard from "./ProductCard";
 
 function ProductList() {
   const [isCategory, setIsCategory] = useState(true);
@@ -173,7 +174,9 @@ function ProductList() {
             </div>
           </div>
         </div>
-        <div className="bg-red-200 mt-6">Here Will be the cards</div>
+        <div className="py-5 border-stone-200 rounded-md">
+          <ProductCard />
+        </div>
       </div>
     </section>
   );
