@@ -52,11 +52,11 @@ export default function ProductDetails() {
                 </div>
 
                 {/* Main Product Card */}
-                <div className="bg-white rounded-md border border-stone-200 p-5 mb-6">
-                    <div className="flex justify-between items-center">
+                <div className="bg-white rounded-lg border border-stone-200 p-6 mb-8 shadow-sm">
+                    <div className="grid gap-6" style={{ gridTemplateColumns: '280px 1fr 260px' }}>
                         {/* Left: Images */}
                         <div className="flex flex-col gap-4">
-                            <div className="border border-stone-200 rounded-md p-2 h-[350px] flex items-center justify-center">
+                            <div className="border border-stone-200 rounded-lg p-3 h-[320px] flex items-center justify-center bg-white">
                                 <Image
                                     src={imgSrc}
                                     width={300}
@@ -65,25 +65,25 @@ export default function ProductDetails() {
                                     className="object-contain max-h-full"
                                 />
                             </div>
-                            <div className="flex gap-2 [&>*]:border [&>*]:border-stone-200 [&>*]:rounded-md [&>*]:p-1 [&>*]:cursor-pointer [&>*]:w-14 [&>*]:h-14">
-                                <div><Image src={imgSrc} width={50} height={50} className="object-cover w-full h-full" alt="thumb" /></div>
-                                <div><Image src={imgSrc} width={50} height={50} className="object-cover w-full h-full" alt="thumb" /></div>
-                                <div><Image src={imgSrc} width={50} height={50} className="object-cover w-full h-full" alt="thumb" /></div>
-                                <div><Image src={imgSrc} width={50} height={50} className="object-cover w-full h-full" alt="thumb" /></div>
-                                <div><Image src={imgSrc} width={50} height={50} className="object-cover w-full h-full" alt="thumb" /></div>
-                                <div><Image src={imgSrc} width={50} height={50} className="object-cover w-full h-full" alt="thumb" /></div>
+                            <div className="flex gap-3 mt-2">
+                                <div className="border border-stone-200 rounded-md p-1.5 cursor-pointer w-14 h-14 hover:border-blue-400 transition-colors"><Image src={imgSrc} width={50} height={50} className="object-cover w-full h-full rounded-sm" alt="thumb" /></div>
+                                <div className="border border-stone-200 rounded-md p-1.5 cursor-pointer w-14 h-14 hover:border-blue-400 transition-colors"><Image src={imgSrc} width={50} height={50} className="object-cover w-full h-full rounded-sm" alt="thumb" /></div>
+                                <div className="border border-stone-200 rounded-md p-1.5 cursor-pointer w-14 h-14 hover:border-blue-400 transition-colors"><Image src={imgSrc} width={50} height={50} className="object-cover w-full h-full rounded-sm" alt="thumb" /></div>
+                                <div className="border border-stone-200 rounded-md p-1.5 cursor-pointer w-14 h-14 hover:border-blue-400 transition-colors"><Image src={imgSrc} width={50} height={50} className="object-cover w-full h-full rounded-sm" alt="thumb" /></div>
+                                <div className="border border-stone-200 rounded-md p-1.5 cursor-pointer w-14 h-14 hover:border-blue-400 transition-colors"><Image src={imgSrc} width={50} height={50} className="object-cover w-full h-full rounded-sm" alt="thumb" /></div>
+                                <div className="border border-stone-200 rounded-md p-1.5 cursor-pointer w-14 h-14 hover:border-blue-400 transition-colors"><Image src={imgSrc} width={50} height={50} className="object-cover w-full h-full rounded-sm" alt="thumb" /></div>
                             </div>
                         </div>
 
                         {/* Middle: Details */}
-                        <div className="flex flex-col gap-3">
+                        <div className="flex flex-col gap-2 px-4 border-l border-stone-100">
                             <div className="text-green-500 flex items-center gap-1 text-sm font-medium">
                                 <FaCheck /> In stock
                             </div>
                             <h1 className="text-xl font-semibold text-stone-900 leading-snug">
                                 {title}
                             </h1>
-                            <div className="flex items-center gap-4 text-sm text-stone-500">
+                            <div className="flex items-center gap-2 text-sm text-stone-500">
                                 <div className="flex items-center gap-1 text-orange-400">
                                     <div className="flex text-orange-400 text-xs">
                                         <FaStar /><FaStar /><FaStar /><FaStar /><FaStar className="text-stone-300" />
@@ -97,7 +97,7 @@ export default function ProductDetails() {
                             </div>
 
                             {/* Price Block */}
-                            <div className="bg-[#FFF0DF] p-4 rounded-md flex gap-8 my-2">
+                            <div className="bg-[#FFF0DF] px-5 py-4 rounded-lg flex gap-6 my-1">
                                 <div className="border-r border-stone-300 pr-8">
                                     <p className="text-xl font-bold text-[#FA3434]">${price}</p>
                                     <p className="text-stone-500 text-xs">50-100 pcs</p>
@@ -153,8 +153,8 @@ export default function ProductDetails() {
 
                         {/* Right: Supplier */}
                         <div className="flex flex-col gap-4">
-                            <div className="border border-stone-200 rounded-md p-4 shadow-sm">
-                                <div className="flex gap-4 items-center mb-4 border-b border-stone-100 pb-4">
+                            <div className="border border-stone-200 rounded-lg p-5 shadow-sm px-5 py-5">
+                                <div className="flex gap-4 items-center mb-5 border-b border-stone-100 pb-5">
                                     <div className="w-12 h-12 bg-[#C6F3F1] rounded-md flex items-center justify-center text-[#4CA7A7] font-bold text-2xl">
                                         R
                                     </div>
@@ -163,7 +163,7 @@ export default function ProductDetails() {
                                         <p className="text-stone-500 text-sm">Guanjoi Trading LLC</p>
                                     </div>
                                 </div>
-                                <div className="flex flex-col gap-2 text-stone-500 text-sm mb-6">
+                                <div className="flex flex-col gap-3 text-stone-500 text-sm mb-5">
                                     <div className="flex gap-2 items-center">
                                         <Image src="/Layout/Flags/DE.png" width={20} height={15} alt="flag" className="object-cover" />
                                         <span>Germany, Berlin</span>
@@ -177,9 +177,9 @@ export default function ProductDetails() {
                                         <span>Worldwide shipping</span>
                                     </div>
                                 </div>
-                                <div className="flex flex-col gap-3">
-                                    <button className="bg-blue-600 text-white rounded-md py-2 font-medium hover:bg-blue-700 transition-colors">Send inquiry</button>
-                                    <button className="bg-white border border-stone-200 text-blue-600 rounded-md py-2 font-medium hover:bg-stone-50 transition-colors">Seller&apos; profile</button>
+                                <div className="flex flex-col gap-2.5">
+                                    <button className="bg-blue-600 text-white rounded-lg py-2.5 font-medium hover:bg-blue-700 transition-colors">Send inquiry</button>
+                                    <button className="bg-white border border-stone-200 text-blue-600 rounded-lg py-2.5 font-medium hover:bg-stone-50 transition-colors">Seller&apos;s profile</button>
                                 </div>
                             </div>
                             <div className="flex items-center justify-center gap-2 text-blue-600 font-medium cursor-pointer mt-2">
@@ -190,10 +190,10 @@ export default function ProductDetails() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-[74%_24%] gap-6">
+                <div className="grid gap-5" style={{ gridTemplateColumns: '1fr 280px' }}>
                     {/* Tabs & Descriptions */}
-                    <div className="bg-white border border-stone-200 rounded-md p-5 shadow-sm h-fit">
-                        <div className="flex gap-8 border-b border-stone-200 pb-2 mb-4 text-stone-500 font-medium">
+                    <div className="bg-white border border-stone-200 rounded-lg p-6 shadow-sm h-fit">
+                        <div className="flex gap-6 border-b border-stone-200 pb-3 mb-5 text-stone-500 font-medium">
                             {tabs.map(tab => (
                                 <div
                                     key={tab}
@@ -250,7 +250,7 @@ export default function ProductDetails() {
                     </div>
 
                     {/* You May Like Sidebar */}
-                    <div className="bg-white border border-stone-200 rounded-md p-4 shadow-sm h-fit">
+                    <div className="bg-white border border-stone-200 rounded-lg p-5 shadow-sm h-fit">
                         <h3 className="font-semibold text-stone-800 mb-4">You may like</h3>
                         <div className="flex flex-col gap-4">
                             {youMayLike.map((item, i) => (
@@ -269,9 +269,9 @@ export default function ProductDetails() {
                 </div>
 
                 {/* Related Products Section */}
-                <div className="bg-white border border-stone-200 rounded-md p-5 pb-8 mt-6">
+                <div className="bg-white border border-stone-200 rounded-lg p-6 pb-8 mt-5 shadow-sm">
                     <h3 className="font-semibold text-xl text-stone-800 mb-6">Related products</h3>
-                    <div className="grid grid-cols-6 gap-4">
+                    <div className="grid grid-cols-6 gap-5">
                         {relatedProducts.map((prod, i) => (
                             <div key={i} className="flex flex-col gap-2 cursor-pointer group">
                                 <div className="bg-stone-50 rounded-md p-4 h-[180px] flex items-center justify-center border border-transparent group-hover:border-stone-200 transition-all">
@@ -288,7 +288,7 @@ export default function ProductDetails() {
                 </div>
 
                 {/* Discount Banner */}
-                <div className="bg-blue-600 rounded-lg mt-6 p-8 relative overflow-hidden">
+                <div className="bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl mt-5 px-10 py-8 relative overflow-hidden shadow-lg">
                     <div className="relative z-10 flex justify-between items-center">
                         <div className="text-white">
                             <h2 className="text-2xl font-bold mb-1">Super discount on more than 100 USD</h2>
