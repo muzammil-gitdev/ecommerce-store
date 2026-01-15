@@ -2,21 +2,18 @@
 import React, { useState } from "react";
 import Navbar from "../components/navbar";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
 import { FaStar, FaCheck, FaHeart, FaRegHeart, FaGlobe } from "react-icons/fa";
 import { MdOutlineMessage, MdShoppingCart, MdVerifiedUser } from "react-icons/md";
 import { IoIosArrowForward } from "react-icons/io";
 
 export default function ProductDetails() {
-    const searchParams = useSearchParams();
     const [activeTab, setActiveTab] = useState("Description");
 
-    const title = searchParams.get("title") || "Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle";
-    const price = searchParams.get("price") || 98.00;
-    const rating = searchParams.get("rating") || 9.3;
-    const orders = searchParams.get("orders") || "32 reviews"; // Mocking orders as reviews for UI match
-    const imgSrc = searchParams.get("imgSrc") || "/Image/tech/image 32.png"; // Fallback
-    const discount = searchParams.get("discount");
+    // Static product data
+    const title = "Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle";
+    const price = 98.00;
+    const rating = 9.3;
+    const imgSrc = "/Image/tech/image 32.png";
 
     const tabs = ["Description", "Reviews", "Shipping", "About seller"];
 
